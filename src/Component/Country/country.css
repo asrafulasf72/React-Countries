@@ -1,0 +1,26 @@
+.country{
+    border: 2px solid green;
+    margin: 20px;
+    padding: 14px;
+    border-radius:8px;
+    height: 412px;
+}
+.visited-country{
+    background-color: beige;
+    color: black;
+}
+
+.visitedBtn{
+    background-color: orangered;
+    color:white;
+    font-size: medium;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.img{
+    height: 150px;
+}
+

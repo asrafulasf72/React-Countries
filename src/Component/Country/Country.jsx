@@ -1,11 +1,24 @@
-
+import { useState } from 'react';
+import './country.css'
 const Country = ({country}) => {
-    console.log(country.flags.flags.png)
+    console.log(country.area.area)
+
+    const [visited, setVisited]=useState(false)
+
+    const handalVisited=()=>{
+        console.log('Btn Clicked Working')
+
+        setVisited(visited? false:true)
+    }
     return (
         <div>
-            <img src= {country.flags.flags.png} alt= {country.flags.flags.alt} />
-            <h3>Name: {country.name.common}</h3>
-            <h4>Official Name: {country.name.official}</h4>
+            <div className={`country ${visited && 'visited-country'}`}>
+                <img className='img' src= {country.flags.flags.png} alt= {country.flags.flags.alt} />
+                <h2>Name: {country.name.common}</h2>
+                <h5>Official Name: {country.name.official}</h5>
+                <p>Area: {country.area.area}  {country.area.area>38394? "This Big Country":"This Small Country"}</p>
+                <button onClick={handalVisited} className='visitedBtn'>{visited?'Visited':'Not Visited'}</button>
+            </div>
         </div>
     );
 };
