@@ -1,14 +1,11 @@
 import { useState } from 'react';
 import './country.css'
-const Country = ({country}) => {
-    console.log(country.area.area)
-
+const Country = ({country, handalVisitedCountries}) => {
     const [visited, setVisited]=useState(false)
 
     const handalVisited=()=>{
-        console.log('Btn Clicked Working')
-
         setVisited(visited? false:true)
+        handalVisitedCountries(country);
     }
     return (
         <div>
